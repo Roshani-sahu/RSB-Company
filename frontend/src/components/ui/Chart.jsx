@@ -55,7 +55,7 @@ function LineChart({ labels = [], series = [] }) {
       })}
 
       {series.map((entry) => {
-        const points = entry.values.map((value, index) => ({ x: getX(index), y: getY(value) }))
+        const points = (entry.values || []).map((value, index) => ({ x: getX(index), y: getY(value) }))
         const linePath = buildLinePath(points)
 
         return (

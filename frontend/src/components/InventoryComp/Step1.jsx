@@ -135,7 +135,8 @@ export default function Step1({ formData, setFormData }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-300 flex justify-between">
-              Category <span className="text-red-400">*</span>
+              Category 
+              {/* <span className="text-red-400">*</span> */}
               <button type="button" className="text-xs text-accent hover:text-white transition-colors">
                 <Icon name="plus" className="mr-1" /> New
               </button>

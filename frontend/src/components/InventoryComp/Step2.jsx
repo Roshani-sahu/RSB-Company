@@ -166,7 +166,7 @@ export default function Step2({ formData, setFormData, onBack, onSaveDraft, onSu
               {warehouses.map((warehouse) => (
                 <div
                   key={warehouse.id}
-                  className="grid grid-cols-12 gap-4 items-center bg-[#1a1b23] border border-surface-border rounded-xl p-4"
+                  className="grid grid-cols-12 gap-4 items-center bg-[#1a1b23]  border-surface-border rounded-xl p-4"
                 >
                   <div className="col-span-5 flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-surface-card flex items-center justify-center text-accent">
@@ -251,7 +251,7 @@ export default function Step2({ formData, setFormData, onBack, onSaveDraft, onSu
                   type="number"
                   value={reorderRules.reorderPoint}
                   onChange={(e) => handleReorderChange('reorderPoint', e.target.value)}
-                  className="w-full bg-[#1a1b23] border border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
+                  className="w-full bg-[#1a1b23]  border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
                   placeholder="e.g. 50"
                 />
                 <p className="text-xs text-gray-500">
@@ -267,7 +267,7 @@ export default function Step2({ formData, setFormData, onBack, onSaveDraft, onSu
                   type="number"
                   value={reorderRules.reorderQuantity}
                   onChange={(e) => handleReorderChange('reorderQuantity', e.target.value)}
-                  className="w-full bg-[#1a1b23] border border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
+                  className="w-full bg-[#1a1b23]  border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
                   placeholder="e.g. 200"
                 />
                 <p className="text-xs text-gray-500">
@@ -292,7 +292,7 @@ export default function Step2({ formData, setFormData, onBack, onSaveDraft, onSu
                     <select
                       value={supplier.primarySupplier}
                       onChange={(e) => handleSupplierChange('primarySupplier', e.target.value)}
-                      className="w-full bg-[#1a1b23] border border-surface-border rounded-xl py-2.5 pl-4 pr-10 text-white appearance-none focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
+                      className="w-full bg-[#1a1b23]  border-surface-border rounded-xl py-2.5 pl-4 pr-10 text-white appearance-none focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
                     >
                       <option value="" disabled>Select supplier</option>
                       <option value="global">Global Textiles Inc.</option>
@@ -313,7 +313,7 @@ export default function Step2({ formData, setFormData, onBack, onSaveDraft, onSu
                     type="text"
                     value={supplier.supplierSku}
                     onChange={(e) => handleSupplierChange('supplierSku', e.target.value)}
-                    className="w-full bg-[#1a1b23] border border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
+                    className="w-full bg-[#1a1b23]  border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
                     placeholder="Their reference number"
                   />
                 </div>
@@ -326,7 +326,7 @@ export default function Step2({ formData, setFormData, onBack, onSaveDraft, onSu
                     type="number"
                     value={supplier.leadTime}
                     onChange={(e) => handleSupplierChange('leadTime', e.target.value)}
-                    className="w-full bg-[#1a1b23] border border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
+                    className="w-full bg-[#1a1b23]  border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
                     placeholder="e.g. 14"
                   />
                 </div>
@@ -339,7 +339,7 @@ export default function Step2({ formData, setFormData, onBack, onSaveDraft, onSu
                     type="number"
                     value={supplier.moq}
                     onChange={(e) => handleSupplierChange('moq', e.target.value)}
-                    className="w-full bg-[#1a1b23] border border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
+                    className="w-full bg-[#1a1b23]  border-surface-border rounded-xl py-2.5 px-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
                     placeholder="e.g. 100"
                   />
                 </div>

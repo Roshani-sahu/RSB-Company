@@ -1,10 +1,11 @@
 // AddProduct.jsx
-import { useState } from 'react';
-import Step1 from '../components/InventoryComp/Step1';
-import Step2 from '../components/InventoryComp/Step2';
-import GlassCard from '../components/ui/GlassCard';
-import Icon from '../components/ui/Icon';
-import Button from '../components/ui/Button';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Step1 from "./Step1";
+import Step2 from "./Step2";
+import GlassCard from "../ui/GlassCard";
+import Icon from "../ui/Icon";
+import Button from "../ui/Button";
 
 export default function AddProduct() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -23,16 +24,17 @@ export default function AddProduct() {
   };
 
   const handleSaveDraft = () => {
-    console.log('Draft saved:', formData);
+    navigate("/inventory");
     // Implement draft save logic
   };
 
+  const navigate = useNavigate();
+
   const handleCancel = () => {
-    // Implement cancel/navigation logic
-    console.log('Cancelled');
+    navigate("/inventory");
   };
 
-  const progressWidth = currentStep === 1 ? 'w-1/2' : 'w-full';
+  const progressWidth = currentStep === 1 ? "w-1/2" : "w-full";
 
   return (
     <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden relative z-10 bg-[#0a0a0f]">
@@ -45,17 +47,19 @@ export default function AddProduct() {
 
       {/* Main Scrollable Area */}
       <main className="flex-1 overflow-y-auto scrollbar-hide p-6 lg:p-8">
-        <div className="max-w-5xl mx-auto">
+        <div className=" mx-auto">
           {/* Header & Actions */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                {currentStep === 1 ? 'Create New Product' : 'Warehouse & Controls'}
+                {currentStep === 1
+                  ? "Create New Product"
+                  : "Warehouse & Controls"}
               </h1>
               <p className="text-sm text-gray-400 mt-1">
                 {currentStep === 1
-                  ? 'Add a new item to your inventory catalog.'
-                  : 'Configure storage and tracking settings.'}
+                  ? "Add a new item to your inventory catalog."
+                  : "Configure storage and tracking settings."}
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -75,7 +79,7 @@ export default function AddProduct() {
                 onClick={handleNextStep}
                 className="flex items-center gap-2 bg-accent hover:bg-[#7244eb] text-white px-5 py-2 rounded-xl text-sm font-medium transition-all shadow-[0_0_15px_rgba(96,47,247,0.2)]"
               >
-                {currentStep === 1 ? 'Next Step' : 'Submit Product'}{' '}
+                {currentStep === 1 ? "Next Step" : "Submit Product"}{" "}
                 <Icon name="arrowRight" className="text-xs" />
               </button>
             </div>
@@ -94,14 +98,14 @@ export default function AddProduct() {
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center font-medium border-4 border-[#0a0a0f] ${
                     currentStep >= 1
-                      ? 'bg-accent text-white shadow-[0_0_15px_rgba(96,47,247,0.3)]'
-                      : 'bg-[#13141a] text-gray-500 border border-surface-border'
+                      ? "bg-accent text-white shadow-[0_0_15px_rgba(96,47,247,0.3)]"
+                      : "bg-[#13141a] text-gray-500 border border-surface-border"
                   }`}
                 >
                   1
                 </div>
                 <span
-                  className={`text-xs font-medium ${currentStep >= 1 ? 'text-white' : 'text-gray-500'}`}
+                  className={`text-xs font-medium ${currentStep >= 1 ? "text-white" : "text-gray-500"}`}
                 >
                   Core Details
                 </span>
@@ -112,14 +116,14 @@ export default function AddProduct() {
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center font-medium border-4 border-[#0a0a0f] ${
                     currentStep >= 2
-                      ? 'bg-accent text-white shadow-[0_0_15px_rgba(96,47,247,0.3)]'
-                      : 'bg-[#13141a] text-gray-500 border border-surface-border'
+                      ? "bg-accent text-white shadow-[0_0_15px_rgba(96,47,247,0.3)]"
+                      : "bg-[#13141a] text-gray-500 border border-surface-border"
                   }`}
                 >
                   2
                 </div>
                 <span
-                  className={`text-xs font-medium ${currentStep >= 2 ? 'text-white' : 'text-gray-500'}`}
+                  className={`text-xs font-medium ${currentStep >= 2 ? "text-white" : "text-gray-500"}`}
                 >
                   Warehouse & Controls
                 </span>
@@ -137,7 +141,7 @@ export default function AddProduct() {
               setFormData={setFormData}
               onBack={handlePrevStep}
               onSaveDraft={handleSaveDraft}
-              onSubmit={() => console.log('Submit:', formData)}
+              onSubmit={() => console.log("Submit:", formData)}
             />
           )}
 
@@ -160,7 +164,7 @@ export default function AddProduct() {
                 onClick={handleNextStep}
                 className="flex items-center gap-2 bg-accent hover:bg-[#7244eb] text-white px-6 py-2.5 rounded-xl text-sm font-medium transition-all shadow-[0_0_15px_rgba(96,47,247,0.2)]"
               >
-                {currentStep === 1 ? 'Next Step' : 'Submit Product'}{' '}
+                {currentStep === 1 ? "Next Step" : "Submit Product"}{" "}
                 <Icon name="arrowRight" className="text-xs ml-1" />
               </button>
             </div>
