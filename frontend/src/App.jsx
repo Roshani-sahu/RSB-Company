@@ -6,7 +6,8 @@ import Inventory from "./pages/Inventory.jsx";
 import AddProduct from "./components/InventoryComp/AddProduct.jsx";
 import Step1 from "./components/InventoryComp/Step1.jsx";
 import Step2 from "./components/InventoryComp/Step2.jsx";
-import ProductDetail from "./pages/ProductDetail.jsx";``
+import ProductDetail from "./pages/ProductDetail.jsx";
+import PurchaseOrder from "./pages/PurchaseOrder.jsx";
 import Reports from "./pages/Reports.jsx";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/add-product/step-1" element={<Step1 />} />
         <Route path="/add-product/step-2" element={<Step2 />} />
         <Route path="/product-detail" element={<ProductDetail />} />
+        <Route path="/purchase-orders" element={<PurchaseOrder />} />
         <Route path="/alerts" element={<Alerts />} />
         <Route path="/reports" element={<Reports />} />
       </Route>

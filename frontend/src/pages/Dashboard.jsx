@@ -148,7 +148,13 @@ export default function Dashboard() {
           {isLoading ? (
             <Skeleton className="h-[320px] w-full rounded-xl" />
           ) : (
-            <Chart type="line" labels={revenueChart.labels} series={revenueChart.series} />
+            <Chart
+              type="line"
+              labels={revenueChart.labels}
+              series={revenueChart.series}
+              animate
+              duration={950}
+            />
           )}
         </ChartCard>
 
@@ -168,6 +174,8 @@ export default function Dashboard() {
               type="donut"
               centerLabel={`${capacityAverage}%`}
               segments={warehouseCapacity}
+              animate
+              duration={900}
               className="mb-5"
             />
           )}

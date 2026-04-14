@@ -8,6 +8,7 @@ const navigationItems = [
   { to: '/inventory', label: 'Inventory', icon: 'inventory' },
   { to: '/product-detail', label: 'Product Detail', icon: 'product' },
   { to: '/alerts', label: 'Alerts', icon: 'alerts', badge: '3' },
+  { to: '/purchase-orders', label: 'Purchase Orders', icon: 'orders' },
   { to: '/reports', label: 'Reports', icon: 'reports' },
 ]
 

@@ -101,12 +101,18 @@ export default function ProductDetail() {
       </GlassCard>
 
       {/* TABS */}
-      <div className="flex gap-6 border-b border-border text-sm">
-        {["overview", "stock", "movement", "serial"].map((tab) => (
+      <div className="flex gap-12  border-b border-border text-xl">
+        {["Overview",
+"Stock by Location",
+"Movements",
+"Serial / Lot",
+"Expiry",
+"Documents",
+"Activity"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`pb-3 ${
+            className={`pb-3 mt-5 ${
               activeTab === tab
                 ? "text-accent border-b-2 border-accent"
                 : "text-text-muted"
@@ -125,7 +131,7 @@ export default function ProductDetail() {
 
           {/* CHARTS */}
           <div className="grid md:grid-cols-2 gap-6">
-            <GlassCard className="p-5">
+            <GlassCard className="p-5 ">
               <h3 className="mb-3 font-semibold">Stock Timeline</h3>
               <Chart
                 type="line"
@@ -207,9 +213,20 @@ export default function ProductDetail() {
             <h3 className="mb-4 font-semibold">Create Documents</h3>
 
             <div className="grid grid-cols-2 gap-3">
-              <Button variant="secondary">Create SO</Button>
-              <Button variant="secondary">Create PO</Button>
-            </div>
+  <Button
+    variant="secondary"
+    leftIcon={<Icon name="fileInvoice" className="h-4 w-4" />}
+  >
+    Create SO
+  </Button>
+
+  <Button
+    variant="secondary"
+    leftIcon={<Icon name="cart" className="h-4 w-4" />}
+  >
+    Create PO
+  </Button>
+</div>
           </GlassCard>
         </div>
       </div>
