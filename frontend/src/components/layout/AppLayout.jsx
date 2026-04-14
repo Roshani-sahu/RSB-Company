@@ -1,0 +1,40 @@
+import { useEffect, useState } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
+import AtmosphericBackground from './AtmosphericBackground.jsx'
+import Header from './Header.jsx'
+import Sidebar from './Sidebar.jsx'
+
+export default function AppLayout() {
+  const [isSidebarOpen, setSidebarOpen] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    setSidebarOpen(false)
+  }, [location.pathname])
+
+  return (
+    <div className="relative min-h-screen bg-bg text-text-primary">
+      <AtmosphericBackground />
+
+      {isSidebarOpen ? (
+        <button
+          type="button"
+          onClick={() => setSidebarOpen(false)}
+          className="fixed inset-0 z-30 bg-black/45 backdrop-blur-sm lg:hidden"
+          aria-label="Close sidebar overlay"
+        />
+      ) : null}
+
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+      <div className="relative flex min-h-screen flex-1 flex-col lg:pl-64">
+        <Header onMenuClick={() => setSidebarOpen(true)} />
+        <main className="flex-1 overflow-x-hidden overflow-y-auto px-4 py-6 sm:px-6 lg:px-8">
+          <div className="mx-auto w-full max-w-7xl page-transition">
+            <Outlet />
+          </div>
+        </main>
+      </div>
+    </div>
+  )
+}
