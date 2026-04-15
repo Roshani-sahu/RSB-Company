@@ -161,7 +161,7 @@ export default function SignIn() {
               <Icon name="boxes" className="text-white text-xl" />
             </div>
             <span className={`text-2xl font-bold tracking-tight ${themeClasses.textPrimary}`}>
-              NexStock Enterprise
+              RSB & Company
             </span>
           </div>
 
@@ -197,8 +197,8 @@ export default function SignIn() {
         </div>
 
         {/* Right Side: Login Card */}
-        <div className="w-full max-w-md lg:w-1/2 flex justify-center lg:justify-end">
-          <div className={`w-full rounded-[24px] p-8 sm:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] relative overflow-hidden ${themeClasses.glassPanel}`}>
+        <div className="w-full max-w-md lg:w-1/2 flex h-[650px]  justify-center lg:justify-end">
+          <div className={`w-full rounded-[24px] p-8 sm:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] relative overflow-scroll scrollbar-hide ${themeClasses.glassPanel}`}>
             {/* Inner Glow effect */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-50"></div>
 
@@ -225,7 +225,7 @@ export default function SignIn() {
                   placeholder="company-name"
                 />
                 <div className={`absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-sm ${themeClasses.textMuted}`}>
-                  .nexstock.io
+                  .rsbcompany.com
                 </div>
               </div>
 
@@ -339,7 +339,7 @@ export default function SignIn() {
             </form>
 
             {/* SSO and Support */}
-            <div className="mt-8">
+            <div className="mt-5">
               <div className="relative flex items-center py-4">
                 <div className={`flex-grow border-t ${themeClasses.borderColor}`}></div>
                 <span className={`flex-shrink-0 mx-4 text-xs uppercase tracking-wider ${themeClasses.textMuted}`}>

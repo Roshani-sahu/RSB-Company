@@ -112,13 +112,17 @@ export default function Sidebar({ isOpen, onClose, isCollapsed, onToggleCollapse
         </div>
 
         <div className="space-y-1 border-t border-border/15 pt-4">
-          <button
-            type="button"
+          <NavLink
+            to="/settings"
+            onClick={onClose}
             title="Settings"
-            className={cn(
-              'flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-text-secondary transition-all duration-200 hover:bg-surface/70 hover:text-text-primary',
-              isCollapsed && 'lg:justify-center lg:px-2',
-            )}
+            className={({ isActive }) =>
+              cn(
+                'flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-200 hover:bg-surface/70 hover:text-text-primary',
+                isCollapsed && 'lg:justify-center lg:px-2',
+                isActive ? 'text-accent' : 'text-text-secondary',
+              )
+            }
           >
             <Icon name="settings" className="h-[18px] w-[18px]" />
             <span
@@ -129,7 +133,7 @@ export default function Sidebar({ isOpen, onClose, isCollapsed, onToggleCollapse
             >
               Settings
             </span>
-          </button>
+          </NavLink>
           <button
             type="button"
             title="Billing"

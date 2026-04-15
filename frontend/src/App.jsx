@@ -11,6 +11,7 @@ import PurchaseOrder from "./pages/PurchaseOrder.jsx";
 import Reports from "./pages/Reports.jsx";
 import Warehouses from "./pages/Warehouses.jsx";
 import Login from "./pages/Login.jsx";
+import Settings from "./pages/Settings.jsx";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/purchase-orders" element={<PurchaseOrder />} />
         <Route path="/alerts" element={<Alerts />} />
         <Route path="/reports" element={<Reports />} />
+        <Route path="/settings" element={<Settings />} />
       </Route>
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>

@@ -25,7 +25,7 @@ export default function AddProduct() {
 
   return (
     <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden relative z-10 bg-bg">
-      <main className="flex-1 overflow-y-auto scrollbar-hide p-6 lg:p-8">
+      <main className="flex-1 overflow-y-auto scrollbar-hide ">
         <div className="mx-auto">
           {/* Header & Actions */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">

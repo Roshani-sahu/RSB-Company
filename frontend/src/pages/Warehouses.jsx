@@ -177,7 +177,7 @@ export default function Warehouses() {
           {/* Map */}
           <div className="relative h-72 border border-border/15 rounded-2xl bg-panel overflow-hidden">
             <img
-              className="w-full h-full object-cover opacity-80 mix-blend-screen"
+              className="w-full h-full object-cover opacity-95 mix-blend-normal dark:opacity-80 dark:mix-blend-screen"
               src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e76d67e872-5e1413415db7c9cd891d.png"
               alt="Warehouse map"
             />
