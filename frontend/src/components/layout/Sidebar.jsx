@@ -6,6 +6,7 @@ import Icon from '../ui/Icon'
 const navigationItems = [
   { to: '/dashboard', label: 'Dashboard', icon: 'dashboard' },
   { to: '/inventory', label: 'Inventory', icon: 'inventory' },
+  { to: '/warehouses', label: 'Warehouses', icon: 'warehouse' },
   { to: '/product-detail', label: 'Product Detail', icon: 'product' },
   { to: '/alerts', label: 'Alerts', icon: 'alerts', badge: '3' },
   { to: '/purchase-orders', label: 'Purchase Orders', icon: 'orders' },
