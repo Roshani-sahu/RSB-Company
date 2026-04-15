@@ -172,6 +172,88 @@ const icons = {
       <path d="M4 6h16M7 12h10M10 18h4" strokeLinecap="round" />
     </>
   ),
+  arrowRight: (
+    <>
+      <path d="m9 6 6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+    </>
+  ),
+  arrowLeft: (
+    <>
+      <path d="m15 6-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
+    </>
+  ),
+  tags: (
+    <>
+      <path d="M4 7a1 1 0 0 1 1-1h5.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-5.586 5.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 4 12.414V7Z" strokeLinejoin="round" />
+      <circle cx="8" cy="10" r="1" fill="currentColor" stroke="none" />
+    </>
+  ),
+  image: (
+    <>
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <circle cx="9" cy="9.5" r="1.5" />
+      <path d="m4 16 4-4 3 3 3-3 6 6" strokeLinecap="round" strokeLinejoin="round" />
+    </>
+  ),
+  cloudArrowUp: (
+    <>
+      <path d="M12 16V8m0 0-3 3m3-3 3 3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M6.5 18a4.5 4.5 0 0 1-.5-9 6 6 0 0 1 11.8-1A4 4 0 0 1 17.5 18" strokeLinecap="round" />
+    </>
+  ),
+  dollarSign: (
+    <>
+      <path d="M12 4v16M15.5 8.5c0-1.4-1.4-2.5-3.5-2.5S8.5 7 8.5 8.5 9.9 11 12 11s3.5 1.1 3.5 2.5S14.1 16 12 16s-3.5-1.1-3.5-2.5" strokeLinecap="round" />
+    </>
+  ),
+  chartPie: (
+    <>
+      <path d="M12 2a10 10 0 1 0 10 10H12V2Z" />
+      <path d="M12 2a10 10 0 0 1 10 10" />
+    </>
+  ),
+  sliders: (
+    <>
+      <path d="M4 8h4M12 8h8M4 16h8M16 16h4" strokeLinecap="round" />
+      <circle cx="10" cy="8" r="2" />
+      <circle cx="14" cy="16" r="2" />
+    </>
+  ),
+  barcode: (
+    <>
+      <path d="M4 6v12M8 6v12M12 6v12M16 6v12M20 6v12" strokeLinecap="round" />
+    </>
+  ),
+  xmark: (
+    <>
+      <path d="m6 6 12 12M18 6 6 18" strokeLinecap="round" />
+    </>
+  ),
+  building: (
+    <>
+      <path d="M4 20V8l8-4 8 4v12H4Z" strokeLinejoin="round" />
+      <path d="M9 20v-5h6v5M9 10h.01M12 10h.01M15 10h.01M9 14h.01M15 14h.01" strokeLinecap="round" />
+    </>
+  ),
+  trash: (
+    <>
+      <path d="M5 7h14M10 11v6M14 11v6M6 7l1 13h10L18 7" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" strokeLinecap="round" />
+    </>
+  ),
+  rotate: (
+    <>
+      <path d="M4 12a8 8 0 0 1 14.93-4H16" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M20 12a8 8 0 0 1-14.93 4H8" strokeLinecap="round" strokeLinejoin="round" />
+    </>
+  ),
+  truckFast: (
+    <>
+      <path d="M3 8h11v9H3zM14 11h4l2 3v3h-6v-6Z" strokeLinejoin="round" />
+      <circle cx="7" cy="18" r="1.5" />
+      <circle cx="17" cy="18" r="1.5" />
+    </>
+  ),
   warehouse: (
     <>
       <path d="M4 10.8 12 5l8 5.8V20H4z" strokeLinejoin="round" />

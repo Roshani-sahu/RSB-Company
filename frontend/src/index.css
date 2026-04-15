@@ -100,11 +100,7 @@ body {
           box-shadow: 0 0 0 1px #602ff7;
         }
 
-        .glass-panel {
-          background: rgba(255,255,255,0.02);
-          backdrop-filter: blur(16px);
-          border: 1px solid rgba(255,255,255,0.05);
-        }
+
 
         /* Hide scrollbar */
 .scrollbar-hide::-webkit-scrollbar {
